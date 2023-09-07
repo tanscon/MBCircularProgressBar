@@ -1,20 +1,22 @@
-// swift-tools-version:5.3
+// swift-tools-version: 5.8
+// The swift-tools-version declares the minimum version of Swift required to build this package.
+
 import PackageDescription
 
 let package = Package(
     name: "MBCircularProgressBar",
     platforms: [
-        .iOS(.v9)
+        .iOS(.v14)
     ],
     products: [
-        .library(name: "MBCircularProgressBar", targets: ["MBCircularProgressBar"])
+        .library(
+            name: "MBCircularProgressBar",
+            targets: ["MBCircularProgressBar"])
     ],
     targets: [
         .target(
             name: "MBCircularProgressBar",
-            path: "Sources",
-            exclude: ["Example"],
-            publicHeadersPath: "."
+            publicHeadersPath: "include"
         ),
     ]
 )
